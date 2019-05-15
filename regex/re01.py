@@ -1,4 +1,4 @@
 import re
 
-pattern = re.compile(r'\bfoo\b')
-print(pattern.search("bar foo barfoo"))
+pattern = re.compile(r'<HTML>')
+print(pattern.match(" <HTML><Head></..>", re.))
