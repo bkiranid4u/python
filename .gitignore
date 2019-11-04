@@ -106,3 +106,4 @@ venv.bak/
 .idea/python.iml
 .idea/vcs.xml
 .idea/workspace.xml
+003_data_structures/.gitignore
