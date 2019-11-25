@@ -1,4 +1,4 @@
-from array import Array
+from . array import Array
 def countChars() :
     theCounter = Array( 127 )
     theCounter.clear(0)
@@ -10,5 +10,4 @@ def countChars() :
     theFile.close()
     for i in range( 26 ):
         print("%c  - %4d         %c - %4d"%(chr(65+i), theCounter( 65 + i), chr(97 + i), theCounter( 97 + i)))
-
 countChars()
