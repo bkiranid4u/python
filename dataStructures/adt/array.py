@@ -15,18 +15,18 @@ class Array:
         return self._size
 
     #  Returns the contents of the index item
-    def __getItem__( self, index ):
-        assert index >= 0 and index < self._size, "Array subscript out of range"
+    def __getitem__( self, index ):
+        assert index >= 0 and index < len( self ), "Array subscript out of range"
         return self._elements[ index ]
 
     #  Puts an item at the given index
-    def __setItem__( self, index, value ):
-        assert index >= 0 and index < self._size, "Array subscript out of range"
+    def __setitem__( self, index, value ):
+        assert index >= 0 and index < len( self ), "Array subscript out of range"
         self._elements[ index ] = value
     
     #  Clears the array with given value 
-    def __clear__( self, value ):
-        for i in range( len(self) ):
+    def clear( self, value ):
+        for i in range( len( self ) ):
             self._elements[ i ] = value
     
     #  Returns the array's iterator for traversing through array elements
