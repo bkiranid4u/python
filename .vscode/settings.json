@@ -1,6 +1,6 @@
 {
   "python.linting.pylintEnabled": true,
-  "python.pythonPath": "/Users/viper/Documents/GitHub/python/venv/bin/python3.8",
+  "python.pythonPath": "C:\\Users\\groot\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
   "python.linting.enabled": true,
   "editor.formatOnSave": true,
   "terminal.integrated.env.osx": {
