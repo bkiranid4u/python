@@ -32,7 +32,7 @@
 from numpy import *
 
 # read the file with the matrix of numbers
-filename = 'src\\001_euler\Euler_Data\euler011_test_data.txt'
+filename = 'src/001_euler/Euler_Data/euler011_test_data.txt'
 
 # store each line of the file into an array
 with open(filename, "r") as ins:
