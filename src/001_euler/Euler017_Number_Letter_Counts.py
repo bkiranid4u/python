@@ -40,21 +40,19 @@ def wordLen(num):
                 len('hundredand') + wordLen(num % 100)
         return wordLength
     if num < m:
-        #         if num % k == 0: return int_to_en(num // k) + ' thousand'
-        #         else: return int_to_en(num // k) + ' thousand, ' + int_to_en(num % k)
         if(num % k == 0):
             wordLength = wordLen(num // k) + len('thousand')
         else:
             wordLength = wordLen(num // k) + \
                 len('thousand') + wordLen(num % k)
         return wordLength
-
-
-def infinite_sequence():
-    num = 1
-    while True:
-        yield num
-        num += 1
+    if num < b:
+        if(num % m == 0):
+            wordLength = wordLen(num // m) + len('million')
+        else:
+            wordLength = wordLen(num // b) + \
+                len('million') + wordLen(num % b)
+        return wordLength
 
 
 def countLetters(num):
@@ -62,31 +60,3 @@ def countLetters(num):
     digitLenDict = (wordLen(i) for i in range(1, num+1))
 
     print(sum(digitLenDict))
-
-
-countLetters(1000)
-#  k = 1000
-#     m = k * 1000
-#     b = m * 1000
-#     t = b * 1000
-
-#     assert(0 <= num)
-
-#     if (num < 20):
-#         return d[num]
-
-#     if (num < 100):
-#         if num % 10 == 0: return d[num]
-#         else: return d[num // 10 * 10] + '-' + d[num % 10]
-
-#     if (num < k):
-#         if num % 100 == 0: return d[num // 100] + ' hundred'
-#         else: return d[num // 100] + ' hundred and ' + int_to_en(num % 100)
-
-#     if (num < m):
-#         if num % k == 0: return int_to_en(num // k) + ' thousand'
-#         else: return int_to_en(num // k) + ' thousand, ' + int_to_en(num % k)
-
-#     if (num < b):
-#         if (num % m) == 0: return int_to_en(num // m) + ' million'
-#         else: return int_to_en(num // m) + ' million, ' + int_to_en(num % m)
