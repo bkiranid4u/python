@@ -50,9 +50,23 @@ def wordLen(num):
         if(num % m == 0):
             wordLength = wordLen(num // m) + len('million')
         else:
-            wordLength = wordLen(num // b) + \
-                len('million') + wordLen(num % b)
+            wordLength = wordLen(num // m) + \
+                len('million') + wordLen(num % m)
         return wordLength
+    if num < t:
+        if(num % m == 0):
+            wordLength = wordLen(num // b) + len('million')
+        else:
+            wordLength = wordLen(num // b) + \
+                len('billion') + wordLen(num % b)
+        return wordLength
+
+    if (num % t == 0):
+        return wordLength(num // t) + len(' trillion')
+    else:
+        return wordLength(num // t) + len(' trillion, ') + wordLen(num % t)
+
+    raise AssertionError('num is too large: %s' % str(num))
 
 
 def countLetters(num):
