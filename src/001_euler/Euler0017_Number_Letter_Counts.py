@@ -74,3 +74,6 @@ def countLetters(num):
     digitLenDict = (wordLen(i) for i in range(1, num+1))
 
     print(sum(digitLenDict))
+
+
+countLetters(10000)
