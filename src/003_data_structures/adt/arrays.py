@@ -5,7 +5,7 @@
 """
 Created on Sun Aug 30 17:31:36 2020
 
-@author: viper
+@author: Kiran 
 """
 
 
@@ -27,8 +27,8 @@ class Array:
 
     def __len__(self):
         return self._size
-       # Gets the contents of the index element.
 
+    # Gets the contents of the index element.
     def __getitem__(self, index):
         assert index >= 0 and index < len(self), "Array subscript out of range"
         return self._elements[index]
