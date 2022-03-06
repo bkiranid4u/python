@@ -35,8 +35,7 @@ class LinkedList:
     def insertAfter(self, after, data):
 
         if after is None:
-            print(
-                "The given previous node must not be none and should exist in Linked List")
+            print("The given previous node must not be none and should exist in Linked List")
         if self.head == None:
             self.head = Node(data)
             return
